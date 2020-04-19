@@ -1,4 +1,6 @@
 var videoConnector;
+var username = prompt('Your name');
+
 /**
  * load a video connector on user device by asking permission
  * to reach and use camera and audio microphone of device
@@ -33,8 +35,8 @@ function onVidyoClientLoaded(status) {
 function connect() {
   videoConnector.Connect({
     host: "prod.vidyo.io",
-    token: 'cHJvdmlzaW9uAHVzZXIxQGNiODAxOS52aWR5by5pbwA2Mzc1NDUwMjk4NQAAMDVjNWEzMzA2YjFjOTgyMjgzODgyMjRkMTQ4ZTZkMDFkNjQ3YTgzZjExNjI1NTgyNzI3NjliNmIwYWJiMzg5YWFhZDUxNjVhNDgyODJjYjUzYzJkYzE5MGIzNGM4NTdi',
-    displayName: "Siemah",
+    token: 'cHJvdmlzaW9uAHVzZXIxQGNiODAxOS52aWR5by5pbwA2Mzc1NDUwNzQ1NAAAMzI4YzJkMGUwZDBjNjg5NDllZGFkZDRmMDIwYzYwZjQ4NjY5ZmRlNzVkZTBjYzM0ZmJiY2VmY2RhNTcyYWQ1NGIxNjkwYTY2ZGE0MWIyYWU5YjMwZWQ1YWQ5MjJjNDE1',
+    displayName: username,
     resourceId: 'mychatroom',
     onSuccess: function () {
       alert('success connecting')
