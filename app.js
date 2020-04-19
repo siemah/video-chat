@@ -17,6 +17,8 @@ function onVidyoClientLoaded(status) {
     })
     .then( function(vc) {
       videoConnector = vc;
+      document.querySelector('#msg').innerHTML = JSON.stringify(vc)
+
       // console.log('create Vidyo connector successfully')
       alert('create Vidyo connector successfully')
     })
@@ -39,8 +41,7 @@ function connect() {
     },
     onFailure: function (reason) {
       console.error(reason);
-      
-      alert('ERROR', reason)
+      document.querySelector('#msg').innerHTML = JSON.stringify(reason)
     },
     onDisconnected: function (reason) {
       alert('user has discounnected', reason)
